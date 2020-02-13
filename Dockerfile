@@ -2,7 +2,7 @@
 FROM node:12-stretch AS build
 WORKDIR /build
 COPY package-lock.json package.json ./
-RUN npm ci
+RUN ["npm","ci"]
 COPY . .
 
 # runtime stage
